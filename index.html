@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" data-phone>
+<head><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ffdb3e"><link id="favicon" rel="icon" sizes="64x64" type="image/png" href="./icons/coin.png"><title>Teachery | BFCM cha-ching</title><link rel="stylesheet" href="./style.css"><script defer src="./phone.js"></script><script src="./app.js" defer></script></head>
+<body>
+<main>
+<div class="toolbar" aria-label="Live sales controls">
+<div id="connection" class="connection" role="status" title="Connecting to Stripe"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/><path d="M7.8 7.8a6 6 0 0 0 0 8.4m8.4-8.4a6 6 0 0 1 0 8.4M5 5a10 10 0 0 0 0 14M19 5a10 10 0 0 1 0 14"/></svg><span class="sr-only">Connecting to Stripe</span></div>
+<div id="status-indicator" class="status-indicator" hidden>
+<button id="status-button" class="icon-button" aria-label="Sync status" aria-expanded="false" aria-controls="notice"><svg class="status-spinner" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-8-8"/></svg><svg class="status-info" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 11v5m0-9v.1"/></svg></button>
+<div id="notice" role="status" hidden></div>
+</div>
+<span id="updated" class="sr-only">First sync in progress</span>
+<button id="sound" class="icon-button" aria-label="Enable sale sounds" aria-pressed="false" title="Sound off. Click to enable"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4 5 9H2v6h3l6 5V4Z"/><path class="sound-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-muted" d="m16 9 6 6m0-6-6 6"/></svg></button>
+<button id="refresh" class="icon-button" aria-label="Refresh sales" title="Refresh sales"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 1-2.34-5.66L20 8"/><path d="M20 3v5h-5"/></svg></button>
+</div>
+<section class="hero" aria-label="Sales summary">
+<div class="marquee"><div class="marquee-inner"><div id="profit" class="profit" aria-label="Estimated profit">$...</div><small id="today-revenue" class="today-revenue" title="Gross revenue since midnight Pacific"></small><button class="party" id="party" aria-label="Play a celebration">✦ Tiny happy dance</button></div></div>
+<aside class="receipt"><div class="receipt-caption">BLACK FRIDAY · BF2026<br>NOV 01, 2026 → NOW</div><div class="receipt-rule"></div><div class="receipt-line"><b>REVENUE</b><i></i><strong id="revenue">...</strong></div><p id="revenue-math">Checking Stripe</p><div class="receipt-line pink"><b>AFFILIATE FEES 25%</b><i></i><strong id="fees">...</strong></div><p id="fee-math">Verified referral links</p><div id="adjustments" hidden><div class="receipt-line"><b>REFUNDS / DISPUTES</b><i></i><strong id="deductions"></strong></div></div><div class="receipt-total"><b>EST. PROFIT</b><strong id="receipt-profit">...</strong></div><div class="thanks">★ THANK YOU, COME AGAIN ★</div></aside>
+</section>
+<section class="stats" aria-label="Sale counts"><article class="stat yellow"><div>🛒 Total $570 sales</div><section class="stat-value"><strong id="total-count">...</strong><small id="total-today" title="Since midnight Pacific"></small></section><span>Lifetime looks good on you.</span></article><article class="stat pink-card"><div>🤝 From referral links</div><section class="stat-value"><strong id="affiliate-count">...</strong><small id="affiliate-today" title="Since midnight Pacific"></small></section><span>A little help from our friends.</span></article><article class="stat cyan"><div>✌️ No referral link</div><section class="stat-value"><strong id="direct-count">...</strong><small id="direct-today" title="Since midnight Pacific"></small></section><span>Straight to the good stuff.</span></article></section>
+<section class="sales"><div class="section-title"><h2>🧾 Every sale</h2><span id="sales-caption">LIVE FROM STRIPE · USD</span></div><div class="table-wrap"><table><thead><tr><th>PAID (PACIFIC)</th><th>BOUGHT THROUGH</th><th>REFERRAL LINK</th><th>AMOUNT</th><th>STATUS</th></tr></thead><tbody id="sales-body"><tr><td colspan="5" class="empty">Counting your cha-chings...</td></tr></tbody></table></div></section>
+<footer><p>💡 Referral fees are estimated at 25% for verified Stripe referral links. Earlier affiliate signups that later buy through Billing may not appear in Stripe, so this is not a final commission statement.</p><div><span><span id="phone-verified">Loading saved sales…</span></span><a id="phone-link" hidden target="_blank" rel="noopener noreferrer">OPEN ON YOUR PHONE ↗</a></div></footer>
+</main><div id="toast" role="status" hidden></div><div id="confetti" aria-hidden="true"></div>
+</body></html>
