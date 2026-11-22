@@ -177,7 +177,7 @@ function status() {
 async function poll() {
   if(fetching)return;fetching=true;
   try{if(hostedPhone){render(await readPhoneSnapshot());return;}const response=await fetch('/api/sales',{signal:AbortSignal.timeout(10000)});if(!response.ok)throw Error();render(await response.json());}
-  catch(error){if(hostedPhone){showStatus(error.message || 'Could not load the saved totals.');return;}if(snapshot){snapshot.error='Local tracker is reconnecting. Your last verified totals are still here.';status();}else{showStatus('Cannot reach the local tracker. Retrying automatically.');}}
+  catch(error){if(hostedPhone){const message=error.message || 'Could not load the saved totals.';if(snapshot)snapshot.error=message;showStatus(message);return;}if(snapshot){snapshot.error='Local tracker is reconnecting. Your last verified totals are still here.';status();}else{showStatus('Cannot reach the local tracker. Retrying automatically.');}}
   finally{fetching=false;}
 }
 async function watchUpdates() {

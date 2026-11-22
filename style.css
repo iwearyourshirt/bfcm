@@ -5,7 +5,7 @@
 @media(max-width:1050px) and (min-width:761px){.hero{grid-template-columns:1.25fr 1fr}.receipt-line{font-size:12px}.stat div{font-size:14px}}
 @media(max-width:760px){.edition{font-size:12px}.intro p{font-size:16px}.controls{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center}.connection{font-size:14px}#updated{order:3;width:100%;font-size:12px}.buttons button{font-size:12px}.marquee p{font-size:14px}.receipt-line{font-size:14px}.stat div{font-size:14px;min-height:58px}.section-title>span{font-size:12px;max-width:130px}th{font-size:12px}td{font-size:14px}.stat span{display:none}footer>div{font-size:12px}.new{font-size:12px}}
 
-@font-face{font-family:Outfit;src:url('/outfit-bold.ttf') format('truetype');font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:Outfit;src:url('./outfit-bold.ttf') format('truetype');font-style:normal;font-weight:700;font-display:swap}
 main{padding-top:18px}
 .toolbar{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-bottom:22px;min-height:40px}
 .toolbar .connection,.icon-button{display:flex;align-items:center;justify-content:center;width:36px;height:36px;padding:8px;border:0;border-radius:50%;background:transparent;color:#77786f}
